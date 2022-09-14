@@ -6,14 +6,8 @@
     type="text"
     placeholder="Search"
     v-model="this.$store.state.query"
+    @keyup="this.$store.dispatch('getProductResults', this.$store.state.query)"
     >
-    
-    <button
-      class="bg-blue-900 text-white rounded-full p-2 hover:bg-blue-700 focus:outline-none w-12 h-12 flex items-center justify-center"
-      @click="this.$store.dispatch('getProductResults', this.$store.state.query)"
-    >
-    </button>
-
     <results-set />
   </div>
 </template>

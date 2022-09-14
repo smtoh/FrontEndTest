@@ -1,13 +1,17 @@
 <template>
   <div>
     <input
-    class="rounded-l-full w-full py-6 px-6 text-gray-700 leading-tight focus:outline-none"
+    class=""
     id="search"
     type="text"
     placeholder="Search"
     v-model="this.$store.state.query"
     @keyup="this.$store.dispatch('getProductResults', this.$store.state.query)"
-    >
+    style="height: 30px; width: 1000px; margin: 24px"
+    
+    />
+
+
     <results-set />
   </div>
 </template>
